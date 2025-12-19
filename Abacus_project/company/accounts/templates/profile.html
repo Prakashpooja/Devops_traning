@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+
+<h2>Welcome {{ request.user.username }}</h2>
+
+{% if profile.role == "owner" %}
+    <h3>You are the OWNER</h3>
+{% else %}
+    <h3>You are an EMPLOYEE</h3>
+{% endif %}
+
+<a href="/about/">About Us</a> |
+<a href="/logout/">Logout</a>
+
+</body>
+</html>
